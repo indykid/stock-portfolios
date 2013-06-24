@@ -1,27 +1,26 @@
+
 class Stock
+
 
   attr_accessor :stock_name, :stock_quantity
 
-  def initialize(stock_name, stock_quantity)
-    @stock_name = stock_name
-    @stock_quantity = stock_quantity
+  def initialize(name, quantity)
+    @stock_name = name
+    @stock_quantity = quantity
   end
 
 
-  def to_s
-    "you have #{stock_quantity} shares of #{stock_name} stock"
+  # def to_s
+  #   "you have #{stock_quantity} shares of #{stock_name} stock"
+  # end
+
+
+  def fetch_price
+    YahooFinance::get_quotes(YahooFinance::StandardQuote, @stock_name)[@stock_name].lastTrade
   end
 
-  def create_new_stock(portfolio_name)
-    print "Stock name: "
-    stock_name = gets.chomp
-    print "Stock quantity: "
-    stock_quantity = gets.to_i
-    account.portfolio.stocks[stock_name] = Stock.new(stock_name, stock_quantity)
+  def stock_value
+    @stock_quantity * fetch_price
   end
-
-  # def fetch_price
-    #   #price = YahooFinance::get_quotes(YahooFinance::StandardQuote, 'AAPL')['AAPL'].lastTrade
-    # end
 
 end

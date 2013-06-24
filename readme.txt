@@ -4,33 +4,51 @@
 
 
 Client account £$
-  buy stock @market rate
+  buy stock @ market rate
   sell stock
 
   [Portfolio]
   contains stock
 
-    [Stock] - name of stocks and amount of money adjusted depending on sale/purchase
+    [Stock] - name of stocks and quantity
 
 
 
 
-#Create an account for client (name, balance).
-#Every client can create multiple portfolios.
 
-#A client can buy stocks at market rate; these stocks will be added to a portfolio and the purchase amount subtracted from cash. (You cannot go to a negative cash balance).
+  #Create an account for client (name, balance).
+  #Every client can create multiple portfolios.
 
-#A client can sell a stock. The proceeds go into his account.
+***************
+A client can buy stocks at market rate; these stocks will be added to a portfolio and the purchase amount subtracted from cash. (You cannot go to a negative cash balance).
 
-List all client portfolios and their values (each portfolio value and sum of portfolio values) and the account balance.
+A client can sell a stock. The proceeds go into his account.
+****************
 
-List all stocks in a portfolio.
+  #List all client portfolios and their values
+  (each portfolio value and sum of portfolio values) and
 
-List all clients.
+the account balance.
+
+  #List all stocks in a portfolio.
+
+  #List all clients.
 
 Note:
 
 Each time a portfolio balance is calculated, the program needs to go out to the web and get current stock prices.
+
+
+
+
+
+
+
+
+
+
+
+
 
 yahoofinance gem:
 

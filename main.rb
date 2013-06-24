@@ -1,4 +1,5 @@
 require 'pry'
+require "yahoofinance"
 
 require_relative "client_account"
 require_relative "stock"
@@ -44,24 +45,27 @@ stock12 = Stock.new "GPRC", 30
     portfolio3.stocks[stock.stock_name] = stock
   end
 
+# ****** DEFIINING METHODS *******
+
+
+
 binding.pry
+
+# def create_new_account
+#   #
+# end
 
 # ****** SETTING UP MENU *******
 
-#
-#
-number_of_portfolios = account.portfolios.size
-
-
-
-def list_portfolios_with_values
-
-end
-
-#(1..account.portfolios.size).each{|i| }
-
-
 #puts "Welcome to your account #{account.account_name}, you have #{porfolios.length} porfolios: #{portfolios.keys}"
+
+#
+#
+
+
+
+
+
 
 #list_portfolios
 
@@ -75,4 +79,4 @@ end
 # ******  *******
 
 
-
+#number_of_portfolios = account.portfolios.size

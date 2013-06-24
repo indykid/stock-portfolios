@@ -12,6 +12,12 @@ class ClientAccount
     "#{account_name} has a balance of #{balance}GBP"
   end
 
+  def all_portfolio_values
+    @portfolios.values.map {|e| e.portfolio_value}.inject(:+).round(2)
+  end
+
+
+
 
 
   # def buy_stock(stock_name)
@@ -24,13 +30,9 @@ class ClientAccount
 
   # end
 
-
-
-
-
-# A client can buy stocks at market rate; these stocks will be added to a portfolio and the purchase amount subtracted from cash. (You cannot go to a negative cash balance).
-
-# A client can sell a stock. The proceeds go into his account.
+  # def list_portfolio_names
+  #   puts @portfolios.keys.join "\n"
+  # end
 
 
 
